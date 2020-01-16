@@ -24,7 +24,7 @@ class BikeRental():
 			self.stock -= n
 			return now
 
-	def rent_bike_on_dail_basis(self,n):
+	def rent_bike_on_daily_basis(self,n):
 
 		if n <= 0:
 			print("Number of bikes should be positive!")
@@ -57,7 +57,7 @@ class BikeRental():
 
 	def return_bike(self,request):
 
-		rental_time, rental_basis, no_of_bikes = request
+		rental_basis, rental_time, no_of_bikes = request
 		bill = 0
 
 		if rental_time and rental_basis and no_of_bikes:
@@ -68,7 +68,7 @@ class BikeRental():
 			if rental_basis == 1:
 				bill = round(rental_period.seconds/3600) * 50 * no_of_bikes
 			elif rental_basis == 2:
-				bill = round(rental_period.days/) * 200 * no_of_bikes
+				bill = round(rental_period.days) * 200 * no_of_bikes
 			elif rental_basis == 3:
 				bill = round(rental_period.days/7) * 600 * no_of_bikes
 
