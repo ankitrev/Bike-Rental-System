@@ -35,7 +35,7 @@ def main():
 		else:
 			print("Invalid input. Please enter number between 1-6 ")
 	print("Thank you for using the bike rental system")
-	
+
 
 
 if __name__ == '__main__':
